@@ -20,8 +20,11 @@ body {
 .app {
 	flex-direction: column;
 	text-align: center;
+	justify-content: center;
 	display: flex;
 	gap: 15px;
+	max-width: 480px ;
+	max-height: 630px;
 
 	form {
 		display: flex;
@@ -29,7 +32,6 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		gap:10px;
-		max-height: 630px;
 		padding: 30px 50px;
 		border-radius: $border-radius;
 		border: $border;
@@ -106,4 +108,26 @@ input:invalid ~ .condition{
 
 .ok{
 	color: green
+}
+
+@media screen and (max-width: 680px) {
+
+	.app{
+		max-width: 350px;
+		h1{
+			font-size: 20px;
+		}
+		form{
+			padding: 20px 30px;
+			label{
+			font-size: 15px;
+		}
+
+		.textArea{
+			width: 100%;
+		}
+		}
+		
+	}
+	
 }
