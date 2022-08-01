@@ -70,9 +70,7 @@ function App() {
 	return (
 		<div className='app'>
 			<h1>Заполни форму для оправки</h1>
-			{message && (
-				<div className={message.class}>{message.text}</div>
-			)}
+			{message && <div className={message.class}>{message.text}</div>}
 			<form action=' ' onSubmit={submitForm}>
 				<div className='formInput'>
 					<label htmlFor='name'>Введите имя и фамилию</label>
@@ -144,10 +142,11 @@ function App() {
 						minLength={10}
 						maxLength={300}
 					></textarea>
-					{formValue.message.length < 10 &&	<span className=''>
-						минимальная длина 10 символов, максимальная 300
-					</span>}
-				
+					{formValue.message.length < 10 && (
+						<span className=''>
+							минимальная длина 10 символов, максимальная 300
+						</span>
+					)}
 				</div>
 
 				<button disabled={submit}>
